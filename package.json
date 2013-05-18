@@ -1,17 +1,18 @@
 {
-    "name": "fix.js",
+    "name": "jscop",
     "version": "0.1.0",
-    "author": "it-ony <fix.js@it-ony.de>",
-    "description": "a javascript code fixer",
+    "author": "it-ony <jscop@it-ony.de>",
+    "description": "a javascript static code analysis tool",
+    "main": "jscop.js",
     "scripts": {
         "test": "mocha -R spec"
     },
     "repository": {
         "type": "git",
-        "url": "https://github.com/it-ony/fix.js.git"
+        "url": "https://github.com/it-ony/jscop.git"
     },
     "keywords": [
-        "javascript", "beautify"
+        "javascript", "beautify", "static code analysis"
     ],
     "dependencies": {
         "esprima": "latest"
