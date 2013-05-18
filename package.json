@@ -1,0 +1,27 @@
+{
+    "name": "fix.js",
+    "version": "0.1.0",
+    "author": "it-ony <fix.js@it-ony.de>",
+    "description": "a javascript code fixer",
+    "scripts": {
+        "test": "mocha -R spec"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/it-ony/fix.js.git"
+    },
+    "keywords": [
+        "javascript", "beautify"
+    ],
+    "dependencies": {
+        "esprima": "latest"
+    },
+    "devDependencies": {
+        "chai": "*",
+        "mocha": "*"
+    },
+    "license": "MIT",
+    "engine": {
+        "node": ">=0.4"
+    }
+}
