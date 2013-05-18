@@ -15,7 +15,8 @@
         "javascript", "beautify", "static code analysis"
     ],
     "dependencies": {
-        "esprima": "latest"
+        "esprima": "latest",
+        "inherit.js": "latest"
     },
     "devDependencies": {
         "chai": "*",

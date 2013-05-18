@@ -1,15 +1,23 @@
-[![build status](https://secure.travis-ci.org/it-ony/fix.js.png)](http://travis-ci.org/it-ony/flow.js)
+[![build status](https://secure.travis-ci.org/it-ony/jscop.png)](http://travis-ci.org/it-ony/jscop)
 
-# fix.js
+# jscop
 ## Introduction
 
-fix.js is a static code analyser.
+jscop is a static code analyser written in node js.
 
-## Features
 
-* sequence flow (seq)
-* parallel flow (par) - executes functions in parallel
-* parallel flow for each (parEach) - execute one function in parallel for each item inside a given as array or object
-* seqEach - execute sequence for each function given as array
-* end  - breaks the flow from inside an action
+TODO:
+
+missing curling braces
+too many parameters
+missing semicolon
+boolean trap http://ariya.ofilabs.com/2011/08/hall-of-api-shame-boolean-trap.html
+check documentation
+x=x assignments
+
+var x = 1; return x;
+combine var statements
+
+
+pretty print javascript
 
