@@ -33,5 +33,32 @@ describe("AlwaysUseCurlyBracesCheck", function () {
 
     });
 
+    it("should find missing curly braces for else", function () {
+
+        var code = codeFromFunction(function () {
+            if (1) {
+                console.log("if");
+            } else
+                console.log("else");
+        });
+
+        expect(cop.analyse(code).hasVialotions()).to.be.true;
+
+    });
+
+    it("should handle if and else correctly", function () {
+
+        var code = codeFromFunction(function () {
+            if (1) {
+                console.log("if");
+            } else {
+                console.log("else");
+            }
+        });
+
+        expect(cop.analyse(code).hasVialotions()).to.be.false;
+
+    });
+
 
 });
