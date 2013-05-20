@@ -21,6 +21,17 @@ describe("MissingSemicolonCheck", function () {
 
     });
 
+    it("should not validate statement without semicolon", function () {
+
+        var code = codeFromFunction(function () {
+            x = {}
+        });
+
+        expect(cop.analyse(code).hasVialotions(Index.Checks.MissingSemicolonCheck)).to.be.true;
+
+    });
+
+
     it("should not generate a warning for a call expressions with semicolon", function () {
 
         var code = codeFromFunction(function () {
