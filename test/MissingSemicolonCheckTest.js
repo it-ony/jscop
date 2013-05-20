@@ -1,5 +1,6 @@
 var expect = require('chai').expect,
     JsCop = require(".."),
+    Index = require("../lib"),
     codeFromFunction = JsCop.Helper.codeFromFunction;
 
 describe("MissingSemicolonCheck", function () {
@@ -16,7 +17,7 @@ describe("MissingSemicolonCheck", function () {
             alert()
         });
 
-        expect(cop.analyse(code).hasVialotions()).to.be.true;
+        expect(cop.analyse(code).hasVialotions(Index.Checks.MissingSemicolonCheck)).to.be.true;
 
     });
 
@@ -26,7 +27,7 @@ describe("MissingSemicolonCheck", function () {
             alert();
         });
 
-        expect(cop.analyse(code).hasVialotions()).to.be.false;
+        expect(cop.analyse(code).hasVialotions(Index.Checks.MissingSemicolonCheck)).to.be.false;
 
     });
 
