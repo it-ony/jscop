@@ -106,7 +106,7 @@ describe("AlwaysUseCurlyBracesCheck", function () {
 
     });
 
-    it("should find missing curly braces for ForIn", function () {
+    it("should find missing curly braces for for", function () {
 
         var code = codeFromFunction(function () {
             for (var i; i < 0;i++)
@@ -117,12 +117,34 @@ describe("AlwaysUseCurlyBracesCheck", function () {
 
     });
 
-    it("should not detect correct forIn", function () {
+    it("should not detect correct for", function () {
 
         var code = codeFromFunction(function () {
             for (var i; i < 0; i++) {
-                console.log();
             }
+        });
+
+        expect(cop.analyse(code).hasVialotions()).to.be.false;
+
+    });
+
+    it("should find missing curly braces for do while", function () {
+
+        var code = codeFromFunction(function () {
+            do
+                console.log();
+            while (1);
+        });
+
+        expect(cop.analyse(code).hasVialotions()).to.be.true;
+
+    });
+
+    it("should not detect correct do while", function () {
+
+        var code = codeFromFunction(function () {
+            do {
+            } while (1);
         });
 
         expect(cop.analyse(code).hasVialotions()).to.be.false;
