@@ -21,7 +21,7 @@ describe("AlwaysUseCurlyBracesCheck", function () {
 
     });
 
-    it("should not has violation for simple if with curly braches", function () {
+    it("should not has violation for simple if with curly braces", function () {
 
         var code = codeFromFunction(function () {
             if (1 === 2) {
@@ -52,6 +52,33 @@ describe("AlwaysUseCurlyBracesCheck", function () {
             if (1) {
                 console.log("if");
             } else {
+                console.log("else");
+            }
+        });
+
+        expect(cop.analyse(code).hasVialotions()).to.be.false;
+
+    });
+
+    it("should find missing curly braces for if else", function () {
+
+        var code = codeFromFunction(function () {
+            if (1) {
+                console.log("if");
+            } else if (2)
+                console.log("else");
+        });
+
+        expect(cop.analyse(code).hasVialotions()).to.be.true;
+
+    });
+
+    it("should handle if else correctly", function () {
+
+        var code = codeFromFunction(function () {
+            if (1) {
+                console.log("if");
+            } else if (2) {
                 console.log("else");
             }
         });
