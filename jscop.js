@@ -4,15 +4,19 @@ var inherit = require("inherit.js"),
 
 var JsCop = function (options) {
 
-    var availableChecks = Index.availableChecks;
-
     options = options || {};
 
     if (!options.checks) {
         options.checks = [];
-        for (var i = 0; i < availableChecks.length; i++) {
-            options.checks.push(__dirname + "/lib/checks/" + availableChecks[i]);
+
+        var checks = Index.Checks;
+
+        for (var key in checks) {
+            if (checks.hasOwnProperty(key)) {
+                options.checks.push(__dirname + "/lib/checks/" + checks[key]);
+            }
         }
+
     }
 
     this.options = options;
