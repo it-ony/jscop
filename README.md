@@ -1,4 +1,5 @@
 [![build status](https://secure.travis-ci.org/it-ony/jscop.png)](http://travis-ci.org/it-ony/jscop)
+[![NPM version](https://badge.fury.io/js/jscop.png)](http://badge.fury.io/js/jscop)
 
 # jscop
 ## Introduction
