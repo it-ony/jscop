@@ -60,5 +60,27 @@ describe("AlwaysUseCurlyBracesCheck", function () {
 
     });
 
+    it("should find missing curly braces for while", function () {
+
+        var code = codeFromFunction(function () {
+            while (1)
+                console.log();
+        });
+
+        expect(cop.analyse(code).hasVialotions()).to.be.true;
+
+    });
+
+    it("should not detect correct while", function () {
+
+        var code = codeFromFunction(function () {
+            while (1) {
+            }
+        });
+
+        expect(cop.analyse(code).hasVialotions()).to.be.false;
+
+    });
+
 
 });
