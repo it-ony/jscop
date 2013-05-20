@@ -83,4 +83,28 @@ describe("AlwaysUseCurlyBracesCheck", function () {
     });
 
 
+    it("should find missing curly braces for ForIn", function () {
+
+        var code = codeFromFunction(function () {
+            for (var key in obj)
+                console.log();
+        });
+
+        expect(cop.analyse(code).hasVialotions()).to.be.true;
+
+    });
+
+    it("should not detect correct forIn", function () {
+
+        var code = codeFromFunction(function () {
+            for (var key in obj) {
+                console.log();
+            }
+        });
+
+        expect(cop.analyse(code).hasVialotions()).to.be.false;
+
+    });
+
+
 });
