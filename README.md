@@ -5,19 +5,18 @@
 
 jscop is a static code analyser written in node js.
 
+## Features
 
-TODO:
+* missing curling braces
 
-missing curling braces
-too many parameters
-missing semicolon
-boolean trap http://ariya.ofilabs.com/2011/08/hall-of-api-shame-boolean-trap.html
-check documentation
-x=x assignments
+## TODO:
 
-var x = 1; return x;
-combine var statements
-
-
-pretty print javascript
+* too many parameters
+* missing semicolon
+* boolean trap http://ariya.ofilabs.com/2011/08/hall-of-api-shame-boolean-trap.html
+* check documentation
+* x=x assignments
+* var x = 1; return x;
+*combine var statements
+*pretty print javascript
 
