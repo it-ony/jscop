@@ -9,11 +9,15 @@ jscop is a static code analyser written in node js.
 ## Features
 
 * missing curling braces
+* duplicate properties
+* empty statements
+* eval
+* missing semicolon
+* trailing array comma
 
 ## TODO:
 
 * too many parameters
-* missing semicolon
 * boolean trap http://ariya.ofilabs.com/2011/08/hall-of-api-shame-boolean-trap.html
 * check documentation
 * x=x assignments
