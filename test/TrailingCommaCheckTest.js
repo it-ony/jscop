@@ -3,7 +3,7 @@ var expect = require('chai').expect,
     Index = require("../lib"),
     codeFromFunction = JsCop.Helper.codeFromFunction;
 
-describe("EmptyStatementCheck", function () {
+describe("TrailingCommaCheck", function () {
 
     var cop;
 

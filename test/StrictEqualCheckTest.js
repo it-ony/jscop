@@ -3,7 +3,7 @@ var expect = require('chai').expect,
     Index = require("../lib"),
     codeFromFunction = JsCop.Helper.codeFromFunction;
 
-describe("MissingSemicolonCheck", function () {
+describe("StrictEqualCheck", function () {
 
     var cop;
 

@@ -3,7 +3,7 @@ var expect = require('chai').expect,
     Index = require("../lib"),
     codeFromFunction = JsCop.Helper.codeFromFunction;
 
-describe("MissingSemicolonCheck", function () {
+describe("EvalCheckTest", function () {
 
     var cop;
 
@@ -11,7 +11,7 @@ describe("MissingSemicolonCheck", function () {
         cop = new JsCop();
     });
 
-    it("should not validate call expressions without semicolon", function () {
+    it("should not validate eval call", function () {
 
         var code = codeFromFunction(function () {
             eval();
