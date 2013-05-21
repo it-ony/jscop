@@ -21,7 +21,7 @@ describe("DuplicatePropertyCheck", function () {
             };
         });
 
-        expect(cop.analyse(code).hasVialotions(Index.Checks.DuplicatePropertyNameCheck)).to.be.true;
+        expect(cop.analyse(code).hasViolation(Index.Checks.DuplicatePropertyNameCheck)).to.be.true;
 
         code = codeFromFunction(function () {
             x = {
@@ -31,7 +31,7 @@ describe("DuplicatePropertyCheck", function () {
             };
         });
 
-        expect(cop.analyse(code).hasVialotions(Index.Checks.DuplicatePropertyNameCheck)).to.be.true;
+        expect(cop.analyse(code).hasViolation(Index.Checks.DuplicatePropertyNameCheck)).to.be.true;
 
     });
 
@@ -44,7 +44,7 @@ describe("DuplicatePropertyCheck", function () {
             };
         });
 
-        expect(cop.analyse(code).hasVialotions(Index.Checks.DuplicatePropertyNameCheck)).to.be.false;
+        expect(cop.analyse(code).hasViolation(Index.Checks.DuplicatePropertyNameCheck)).to.be.false;
 
     });
 
@@ -55,7 +55,7 @@ describe("DuplicatePropertyCheck", function () {
             };
         });
 
-        expect(cop.analyse(code).hasVialotions(Index.Checks.DuplicatePropertyNameCheck)).to.be.false;
+        expect(cop.analyse(code).hasViolation(Index.Checks.DuplicatePropertyNameCheck)).to.be.false;
 
     });
 

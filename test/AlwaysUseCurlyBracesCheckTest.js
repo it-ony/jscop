@@ -18,7 +18,7 @@ describe("AlwaysUseCurlyBracesCheck", function () {
                 console.log();
         });
 
-        expect(cop.analyse(code).hasVialotions(AlwaysUseCurlyBracesCheck)).to.be.true;
+        expect(cop.analyse(code).hasViolation(AlwaysUseCurlyBracesCheck)).to.be.true;
 
     });
 
@@ -30,7 +30,7 @@ describe("AlwaysUseCurlyBracesCheck", function () {
             }
         });
 
-        expect(cop.analyse(code).hasVialotions(AlwaysUseCurlyBracesCheck)).to.be.false;
+        expect(cop.analyse(code).hasViolation(AlwaysUseCurlyBracesCheck)).to.be.false;
 
     });
 
@@ -43,7 +43,7 @@ describe("AlwaysUseCurlyBracesCheck", function () {
                 console.log("else");
         });
 
-        expect(cop.analyse(code).hasVialotions(AlwaysUseCurlyBracesCheck)).to.be.true;
+        expect(cop.analyse(code).hasViolation(AlwaysUseCurlyBracesCheck)).to.be.true;
 
     });
 
@@ -57,7 +57,7 @@ describe("AlwaysUseCurlyBracesCheck", function () {
             }
         });
 
-        expect(cop.analyse(code).hasVialotions(AlwaysUseCurlyBracesCheck)).to.be.false;
+        expect(cop.analyse(code).hasViolation(AlwaysUseCurlyBracesCheck)).to.be.false;
 
     });
 
@@ -70,7 +70,7 @@ describe("AlwaysUseCurlyBracesCheck", function () {
                 console.log("else");
         });
 
-        expect(cop.analyse(code).hasVialotions(AlwaysUseCurlyBracesCheck)).to.be.true;
+        expect(cop.analyse(code).hasViolation(AlwaysUseCurlyBracesCheck)).to.be.true;
 
     });
 
@@ -84,7 +84,7 @@ describe("AlwaysUseCurlyBracesCheck", function () {
             }
         });
 
-        expect(cop.analyse(code).hasVialotions(AlwaysUseCurlyBracesCheck)).to.be.false;
+        expect(cop.analyse(code).hasViolation(AlwaysUseCurlyBracesCheck)).to.be.false;
 
     });
 
@@ -95,7 +95,7 @@ describe("AlwaysUseCurlyBracesCheck", function () {
                 console.log();
         });
 
-        expect(cop.analyse(code).hasVialotions(AlwaysUseCurlyBracesCheck)).to.be.true;
+        expect(cop.analyse(code).hasViolation(AlwaysUseCurlyBracesCheck)).to.be.true;
 
     });
 
@@ -106,7 +106,7 @@ describe("AlwaysUseCurlyBracesCheck", function () {
             }
         });
 
-        expect(cop.analyse(code).hasVialotions(AlwaysUseCurlyBracesCheck)).to.be.false;
+        expect(cop.analyse(code).hasViolation(AlwaysUseCurlyBracesCheck)).to.be.false;
 
     });
 
@@ -118,7 +118,7 @@ describe("AlwaysUseCurlyBracesCheck", function () {
                 console.log();
         });
 
-        expect(cop.analyse(code).hasVialotions(AlwaysUseCurlyBracesCheck)).to.be.true;
+        expect(cop.analyse(code).hasViolation(AlwaysUseCurlyBracesCheck)).to.be.true;
 
     });
 
@@ -130,7 +130,7 @@ describe("AlwaysUseCurlyBracesCheck", function () {
             }
         });
 
-        expect(cop.analyse(code).hasVialotions(AlwaysUseCurlyBracesCheck)).to.be.false;
+        expect(cop.analyse(code).hasViolation(AlwaysUseCurlyBracesCheck)).to.be.false;
 
     });
 
@@ -141,7 +141,7 @@ describe("AlwaysUseCurlyBracesCheck", function () {
                 console.log();
         });
 
-        expect(cop.analyse(code).hasVialotions(AlwaysUseCurlyBracesCheck)).to.be.true;
+        expect(cop.analyse(code).hasViolation(AlwaysUseCurlyBracesCheck)).to.be.true;
 
     });
 
@@ -152,7 +152,7 @@ describe("AlwaysUseCurlyBracesCheck", function () {
             }
         });
 
-        expect(cop.analyse(code).hasVialotions(AlwaysUseCurlyBracesCheck)).to.be.false;
+        expect(cop.analyse(code).hasViolation(AlwaysUseCurlyBracesCheck)).to.be.false;
 
     });
 
@@ -164,7 +164,7 @@ describe("AlwaysUseCurlyBracesCheck", function () {
             while (1);
         });
 
-        expect(cop.analyse(code).hasVialotions(AlwaysUseCurlyBracesCheck)).to.be.true;
+        expect(cop.analyse(code).hasViolation(AlwaysUseCurlyBracesCheck)).to.be.true;
 
     });
 
@@ -175,7 +175,7 @@ describe("AlwaysUseCurlyBracesCheck", function () {
             } while (1);
         });
 
-        expect(cop.analyse(code).hasVialotions(AlwaysUseCurlyBracesCheck)).to.be.false;
+        expect(cop.analyse(code).hasViolation(AlwaysUseCurlyBracesCheck)).to.be.false;
 
     });
 

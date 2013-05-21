@@ -17,13 +17,13 @@ describe("EmptyStatementCheck", function () {
             var x = ["foo",];
         });
 
-        expect(cop.analyse(code).hasVialotions(Index.Checks.TrailingCommaCheck)).to.be.true;
+        expect(cop.analyse(code).hasViolation(Index.Checks.TrailingCommaCheck)).to.be.true;
 
         code = codeFromFunction(function () {
             var x = [,];
         });
 
-        expect(cop.analyse(code).hasVialotions(Index.Checks.TrailingCommaCheck)).to.be.true;
+        expect(cop.analyse(code).hasViolation(Index.Checks.TrailingCommaCheck)).to.be.true;
 
     });
 
@@ -33,7 +33,7 @@ describe("EmptyStatementCheck", function () {
             var x = ["foo"];
         });
 
-        expect(cop.analyse(code).hasVialotions(Index.Checks.TrailingCommaCheck)).to.be.false;
+        expect(cop.analyse(code).hasViolation(Index.Checks.TrailingCommaCheck)).to.be.false;
 
     });
 

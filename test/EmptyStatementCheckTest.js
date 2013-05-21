@@ -17,7 +17,7 @@ describe("EmptyStatementCheck", function () {
             ;
         });
 
-        expect(cop.analyse(code).hasVialotions(Index.Checks.EmptyStatementCheck)).to.be.true;
+        expect(cop.analyse(code).hasViolation(Index.Checks.EmptyStatementCheck)).to.be.true;
 
     });
 

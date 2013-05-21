@@ -17,7 +17,7 @@ describe("MissingSemicolonCheck", function () {
             alert()
         });
 
-        expect(cop.analyse(code).hasVialotions(Index.Checks.MissingSemicolonCheck)).to.be.true;
+        expect(cop.analyse(code).hasViolation(Index.Checks.MissingSemicolonCheck)).to.be.true;
 
     });
 
@@ -27,7 +27,7 @@ describe("MissingSemicolonCheck", function () {
             x = {}
         });
 
-        expect(cop.analyse(code).hasVialotions(Index.Checks.MissingSemicolonCheck)).to.be.true;
+        expect(cop.analyse(code).hasViolation(Index.Checks.MissingSemicolonCheck)).to.be.true;
 
     });
 
@@ -38,7 +38,7 @@ describe("MissingSemicolonCheck", function () {
             alert();
         });
 
-        expect(cop.analyse(code).hasVialotions(Index.Checks.MissingSemicolonCheck)).to.be.false;
+        expect(cop.analyse(code).hasViolation(Index.Checks.MissingSemicolonCheck)).to.be.false;
 
     });
 

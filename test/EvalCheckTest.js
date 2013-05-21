@@ -17,7 +17,7 @@ describe("MissingSemicolonCheck", function () {
             eval();
         });
 
-        expect(cop.analyse(code).hasVialotions(Index.Checks.EvalCheck)).to.be.true;
+        expect(cop.analyse(code).hasViolation(Index.Checks.EvalCheck)).to.be.true;
 
     });
 
