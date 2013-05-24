@@ -19,6 +19,13 @@ describe("EmptyStatementCheck", function () {
 
         expect(cop.analyse(code).hasViolation(Index.Checks.EmptyStatementCheck)).to.be.true;
 
+
+        code = codeFromFunction(function () {
+            console.log();;
+        });
+
+        expect(cop.analyse(code).hasViolation(Index.Checks.EmptyStatementCheck)).to.be.true;
+
     });
 
 });
