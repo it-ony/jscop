@@ -1,0 +1,50 @@
+#!/usr/bin/env node
+
+var JsCop = require(".."),
+    fs = require("fs"),
+    colors = require('colors'),
+    argv = require('optimist')
+        .usage("Usage: $0 file [file2 [,file3]]")
+        .demand(1)
+        .argv;
+
+colors.setTheme({
+    silly: 'rainbow',
+    input: 'grey',
+    verbose: 'cyan',
+    prompt: 'grey',
+    info: 'green',
+    data: 'grey',
+    help: 'cyan',
+    warn: 'yellow',
+    debug: 'blue',
+    error: 'red'
+});
+
+var files = argv._,
+    cop = new JsCop();
+
+for (var i = 0; i < files.length; i++) {
+
+    var file = files[i].replace(/^~\//, process.env.HOME + '/');
+
+    console.log('Checking file: "' + file + '"'.info);
+
+    var result = cop.analyse(fs.readFileSync(file).toString());
+
+    if (result.hasViolation()) {
+        for (var j = 0; j < result.checks.length; j++) {
+            var check = result.checks[j];
+
+            if (check.hasViolations()) {
+                console.log(("\t- " + check.type).warn);
+            }
+        }
+    } else {
+        console.log('\tNo violations found');
+    }
+
+
+}
+
+
