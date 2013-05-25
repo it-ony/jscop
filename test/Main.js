@@ -13,7 +13,7 @@ describe("Module", function () {
         it("codeFromFunction", function () {
 
             var code = JsCop.Helper.codeFromFunction(function () {});
-            expect(code).to.eql("(function () {})");
+            expect(code).to.eql("(function () {});");
 
         });
 
