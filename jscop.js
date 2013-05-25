@@ -52,7 +52,7 @@ JsCop.prototype = {
 
 JsCop.Helper = {
     codeFromFunction: function (fn) {
-        return "(" + fn.toString() + ")";
+        return "(" + fn.toString() + ");";
     }
 };
 
