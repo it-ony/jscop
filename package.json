@@ -16,7 +16,8 @@
     ],
     "dependencies": {
         "esprima": "latest",
-        "inherit.js": "latest"
+        "inherit.js": "latest",
+        "optimist": "latest"
     },
     "devDependencies": {
         "chai": "*",
