@@ -6,14 +6,18 @@
 
 jscop is a static code analyser written in node js.
 
-## Features
+## Checks
 
 * missing curling braces
-* duplicate properties
+* debugger statement
+* duplicate property name
+* empty block statements
 * empty statements
 * eval
 * missing semicolon
+* strict equality check
 * trailing array comma
+* with statement check
 
 ## TODO:
 
