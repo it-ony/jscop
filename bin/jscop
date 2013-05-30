@@ -38,6 +38,13 @@ for (var i = 0; i < files.length; i++) {
 
             if (check.hasViolations()) {
                 console.log(("\t- " + check.type).warn);
+
+                for (var k = 0; k < check.vialotions.length; k++) {
+                    var violation = check.vialotions[k];
+
+                    var location = violation.node.token.loc;
+                    console.log(("\t\t" + location.start.line + ":" + location.start.column + " - " + location.end.line + ":" + location.end.column));
+                }
             }
         }
     } else {
