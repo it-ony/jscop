@@ -23,5 +23,24 @@ describe("AstAnalysisTest.js", function () {
 
     });
 
+    it("should handle ConditionalExpression", function () {
+
+        var code = codeFromFunction(function () {
+            var x = y ? 1 : 2;
+        });
+
+        expect(cop.analyse(code).hasViolation()).to.be.false;
+
+        code = codeFromFunction(function () {
+            var x = y ? function() {
+                ;
+            } : y;
+        });
+
+        expect(cop.analyse(code).hasViolation()).to.be.true;
+
+
+    });
+
 
 });
