@@ -19,10 +19,10 @@ jscop is a static code analyser written in node js.
 * trailing array comma
 * with statement check
 * named function expression
+* too many parameters
 
 ## TODO:
 
-* too many parameters
 * boolean trap http://ariya.ofilabs.com/2011/08/hall-of-api-shame-boolean-trap.html
 * check documentation
 * x=x assignments
@@ -47,3 +47,4 @@ jscop is a static code analyser written in node js.
 * unreachable code check
 * unused function arguments check
 * variable declaration after usage
+* check access globals
