@@ -43,8 +43,8 @@ JsCop.prototype = {
         this.checks.push(check);
     },
 
-    analyse: function (code, options) {
-        return new CodeAnalyse(code, options, this).performChecks();
+    analyse: function (code) {
+        return new CodeAnalyse(code, this.options, this).performChecks();
     }
 
 };
@@ -59,6 +59,8 @@ JsCop.Helper = {
 
 JsCop.emptyCallback = function () {
 };
+
+JsCop.Index = Index;
 
 
 module.exports = JsCop;
