@@ -21,6 +21,24 @@ describe("FindUnusedVariablesCheckTest", function () {
 
     });
 
+    it("should find a one of two unused variable", function () {
+
+        var code = codeFromFunction(function () {
+            var x,
+                y;
+
+            (function () {})(x);
+        });
+
+        var analyse = cop.analyse(code);
+        expect(analyse.hasViolation(FindUnusedVariablesCheck)).to.be.true;
+
+        var violations = analyse.getViolations(FindUnusedVariablesCheck);
+        expect(violations).to.have.length(1);
+        expect(violations[0].node.name).to.eql("y");
+
+    });
+
     it("should not find a var as unused if variable is used in function call", function () {
 
         var code = codeFromFunction(function () {
