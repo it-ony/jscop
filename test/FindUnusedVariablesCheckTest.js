@@ -74,6 +74,33 @@ describe("FindUnusedVariablesCheckTest", function () {
 
     });
 
+    it("should not find a var as unused it is used in some nested scopes", function () {
+
+        var code = codeFromFunction(function () {
+            var x;
+
+            function y() {
+                (function(){})(x);
+            }
+
+        });
+
+        expect(cop.analyse(code).hasViolation(FindUnusedVariablesCheck)).to.be.false;
+
+    });
+
+    it("should not find a var as unused it is used in some nested scopes", function () {
+
+        var code = codeFromFunction(function () {
+
+            var a;
+            a++;
+
+        });
+
+        expect(cop.analyse(code).hasViolation(FindUnusedVariablesCheck)).to.be.false;
+
+    });
 
 
 });
