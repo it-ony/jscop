@@ -26,7 +26,8 @@ describe("AstAnalysisTest.js", function () {
     it("should handle ConditionalExpression", function () {
 
         var code = codeFromFunction(function () {
-            var x = y ? 1 : 2;
+            var x = true ? 1 : 2;
+            (function(){})(x);
         });
 
         expect(cop.analyse(code).hasViolation()).to.be.false;
