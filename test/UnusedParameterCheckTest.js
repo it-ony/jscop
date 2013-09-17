@@ -71,8 +71,17 @@ describe("UnusedParameterCheck", function () {
         var code = codeFromFunction(function (x) {
 
             (function() {
+                (function () {
+                    (function () {
+                        (function () {
+                            (function (y) {
+                                return y;
+                            })(x);
+                        })()
+                    })()
+                })()
 
-            })(x);
+            })();
 
         });
 
