@@ -16,7 +16,7 @@ jscop is a static code analyser written in node js.
 * eval
 * expressive parameter use
 * unused variables
-* global loeaks
+* global leaks
 * missing semicolon
 * detect named function expressions
 * strict equality check
