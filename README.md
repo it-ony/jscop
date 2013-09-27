@@ -51,4 +51,6 @@ jscop is a static code analyser written in node js.
 * unreachable code check
 * unused function arguments check
 * variable declaration after usage
+* inconsistent return points
+* duplicate declaration: var twice, var with same name as function, var with same name as parameter, function with same name as parameter
 
