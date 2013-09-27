@@ -87,4 +87,17 @@ describe("GlobalLeakCheckTest", function () {
 
     });
 
+    it.skip("should not report leaks if identifier is a named function", function () {
+
+        var code = codeFromFunction(function () {
+
+            window && window.addEventListener;
+
+        });
+
+        expect(cop.analyse(code).hasViolation(GlobalLeakCheck)).to.be.true;
+
+
+    });
+
 });
