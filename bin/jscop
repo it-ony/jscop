@@ -43,7 +43,7 @@ for (var i = 0; i < files.length; i++) {
                     var violation = check.vialotions[k];
 
                     var location = violation.node.token.loc;
-                    console.log(("\t\t" + location.start.line + ":" + location.start.column + " - " + location.end.line + ":" + location.end.column));
+                    console.log(("\t\t" + location.start.line + ":" + (location.start.column + 1) + " - " + location.end.line + ":" + (location.end.column + 1)));
                 }
             }
         }
