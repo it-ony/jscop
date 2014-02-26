@@ -117,5 +117,29 @@ describe("FindUnusedVariablesCheckTest", function () {
         expect(cop.analyse(code).hasViolation(FindUnusedVariablesCheck)).to.be.false;
     });
 
+    it("should not find a var assignment, that is used within a while loop", function () {
+        var code = codeFromFunction(function () {
+            var child = {};
+
+            while(child){
+            }
+
+        });
+
+        expect(cop.analyse(code).hasViolation(FindUnusedVariablesCheck)).to.be.false;
+    });
+
+
+    it("should not find a var assignment, that is used within a do while loop", function () {
+        var code = codeFromFunction(function () {
+            var child = {};
+
+            do {
+            } while(child);
+
+        });
+
+        expect(cop.analyse(code).hasViolation(FindUnusedVariablesCheck)).to.be.false;
+    });
 
 });
