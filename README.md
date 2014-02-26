@@ -25,6 +25,7 @@ jscop is a static code analyser written in node js.
 * with statement check
 * variable name check
 * identifier reserved words "implements", "interface", "let", "package", "private", "protected", "public", "static", "yield"
+* ; after function declarations
 
 ## TODO:
 
@@ -40,8 +41,6 @@ jscop is a static code analyser written in node js.
 
 * function declaration inside loops
 * for in -> hasOwnProperty
-
-* ; after function declarations
 * deep of nested ifs
 * inconsistent return points
 * case without break check
