@@ -27,7 +27,8 @@ describe("FindUnusedVariablesCheckTest", function () {
             var x,
                 y;
 
-            (function () {})(x);
+            (function () {
+            })(x);
         });
 
         var analyse = cop.analyse(code);
@@ -43,7 +44,8 @@ describe("FindUnusedVariablesCheckTest", function () {
 
         var code = codeFromFunction(function () {
             var x;
-            (function() {})(x);
+            (function () {
+            })(x);
         });
 
         expect(cop.analyse(code).hasViolation(FindUnusedVariablesCheck)).to.be.false;
@@ -67,7 +69,7 @@ describe("FindUnusedVariablesCheckTest", function () {
         var code = codeFromFunction(function () {
             var x;
             (function () {
-            })(x+1);
+            })(x + 1);
         });
 
         expect(cop.analyse(code).hasViolation(FindUnusedVariablesCheck)).to.be.false;
@@ -80,7 +82,8 @@ describe("FindUnusedVariablesCheckTest", function () {
             var x;
 
             function y() {
-                (function(){})(x);
+                (function () {
+                })(x);
             }
 
         });
@@ -100,6 +103,18 @@ describe("FindUnusedVariablesCheckTest", function () {
 
         expect(cop.analyse(code).hasViolation(FindUnusedVariablesCheck)).to.be.false;
 
+    });
+
+    it("should not find a var assignment, that is used", function () {
+        var code = codeFromFunction(function () {
+            var child = {};
+
+            if (child.foo) {
+            }
+
+        });
+
+        expect(cop.analyse(code).hasViolation(FindUnusedVariablesCheck)).to.be.false;
     });
 
 
