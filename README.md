@@ -27,6 +27,16 @@ jscop is a static code analyser written in node js.
 * identifier reserved words "implements", "interface", "let", "package", "private", "protected", "public", "static", "yield"
 * ; after function declarations
 
+## Contribution
+
+* Pick one of the missing checks below, or send in a new check
+* Write at least one positive and one false positive test
+* Run the tests
+
+```
+npm install && npm test
+```
+
 ## TODO:
 
 * boolean trap http://ariya.ofilabs.com/2011/08/hall-of-api-shame-boolean-trap.html
@@ -54,3 +64,11 @@ jscop is a static code analyser written in node js.
 * inconsistent return points
 * duplicate declaration: var twice, var with same name as function, var with same name as parameter, function with same name as parameter
 * if (true), if (1 == 1), if (!true), if (0), if (number) -> if statement with literal
+
+* check function names
+
+## Code style
+
+* spaces/tabs
+* amout of spaces
+
