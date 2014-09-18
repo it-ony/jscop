@@ -26,6 +26,7 @@ jscop is a static code analyser written in node js.
 * variable name check
 * identifier reserved words "implements", "interface", "let", "package", "private", "protected", "public", "static", "yield"
 * ; after function declarations
+* x=x assignments
 
 ## Contribution
 
@@ -41,7 +42,6 @@ npm install && npm test
 
 * boolean trap http://ariya.ofilabs.com/2011/08/hall-of-api-shame-boolean-trap.html
 * check documentation
-* x=x assignments
 * var x = 1; return x;
 *combine var statements
 *pretty print javascript
