@@ -20,5 +20,17 @@ describe("Issues", function () {
         cop.analyse(code);
     });
 
+    it("should parse code containing try catch blocks", function () {
+
+        var code = JsCop.Helper.codeFromFunction(function () {
+            try{
+
+            } catch(e) {
+
+            }
+        });
+
+        cop.analyse(code);
+    });
 
 });
